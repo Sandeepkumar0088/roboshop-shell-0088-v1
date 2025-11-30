@@ -15,7 +15,6 @@ cp cart.service /etc/systemd/system/cart.service
 cd /app
 npm install
 
-systemctl daemon-reload
 
 systemctl enable cart
 systemctl start cart
