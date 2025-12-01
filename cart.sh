@@ -3,14 +3,11 @@ dnf module enable nodejs:20 -y
 
 dnf install nodejs -y
 
-
-curl -L -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart-v3.zip
-unzip /tmp/cart.zip
-
-
 cp cart.service /etc/systemd/system/cart.service
+curl -L -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart-v3.zip
 
 cd /app
+unzip /tmp/cart.zip
 npm install
 
 
